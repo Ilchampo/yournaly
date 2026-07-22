@@ -1,0 +1,582 @@
+{
+	"pages": {
+		"authPage": {
+			"title": "Welcome to your personal writing space",
+			"description": "Let creativity flow while you learn.",
+			"actions": {
+				"google": "Continue with Google",
+				"apple": "Continue with Apple"
+			}
+		},
+		"mainPage": {
+			"title": "Hey {{name}}, what's on your mind today?",
+			"description": "This is your space, your safe zone to express yourself. Use this space to write whatever you want and Yournaly will help you improve your writing skills.",
+			"notEnoughInks": "You don't have enough Inks to review your Yournal. You need {{required}} Inks to review it. You can purchase more Inks from the Purchase page."
+		},
+		"myYournalsPage": {
+			"title": "My Yournals",
+			"description": "Review and manage all your created Yournals.",
+			"emptyTitle": "You have no Yournals yet",
+			"emptyDescription": "We encorauge you to create a new Yournal from the Home page."
+		},
+		"yournalSummaryPage": {
+			"insights": {
+				"title": "Review Insights",
+				"none": "Congratulation! You're making a great progress, there's no significant mistakes.",
+				"original": "Original Text",
+				"suggestion": "Suggested Text",
+				"explanation": "Explanation"
+			},
+			"params": {
+				"title": "Review Parameters"
+			}
+		},
+		"preferencesPage": {
+			"title": "Your Preferences",
+			"description": "You can manage your application and user preferences here. This settings will affect your Yournal review and feedback.",
+			"guides": {
+				"language": "This affects the language of your Yournaly interface and the feedback provided.",
+				"targetLanguage": "This affects the language of the reviewed Yournal.",
+				"theme": "This affects your Yournaly interface appearance.",
+				"themeSoon": "Multiple themes coming soon!"
+			}
+		},
+		"purchasePage": {
+			"title": "Choose your Ink Package",
+			"description": "Select the package that best suits your needs and unlock the full potential of Yournaly.",
+			"loading": "Unboxing Ink Packages...",
+			"selectPackageError": "Please select a package before proceeding",
+			"creatingSession": "Creating checkout session...",
+			"checkoutOpened": "Checkout opened in new tab",
+			"waitingPayment": "Waiting for payment...",
+			"paymentCompleted": "Payment completed!",
+			"paymentSuccess": "Payment successful! Your Inks have been added to your account.",
+			"paymentExpired": "Payment session expired. Please try again.",
+			"paymentStatusError": "Unable to check payment status. Please try again.",
+			"paymentError": "Payment failed. Please try again.",
+			"paymentTimeout": "Payment check timed out after 5 minutes. Please verify your payment and refresh if needed.",
+			"loadError": "Failed to load ink packages. Please try again.",
+			"pollingMessage": "Complete your payment in the opened tab. We'll automatically detect when your payment is successful."
+		},
+		"aboutPage": {
+			"title": "About Yournaly",
+			"description": "Learn more about us, our mission and vision.",
+			"about": "Yournaly is a personal journaling app designed to help you express yourself while improving your writing skills. Our AI-powered review system provides suggestions to enhance your journal entries, making journaling both a creative and educational experience.",
+			"legalTitle": "Legal",
+			"contactTitle": "Contact Us",
+			"contact": "Have questions or feedback? We'd love to hear from you!"
+		}
+	},
+	"components": {
+		"termsOfService": {
+			"title": "Terms of Service",
+			"lastUpdated": "Last updated: 20 July 2025",
+			"intro": "These Terms of Service (\"Terms\") govern your access to and use of the Yournaly browser extension, web services, mobile applications, and any associated software or websites (collectively, the \"Service\") provided by Astrobit LLC (\"Astrobit\", \"we\", \"our\", or \"us\"). By accessing or using the Service, you (\"you\" or \"User\") agree to be bound by these Terms. If you do not agree, do not access or use the Service.",
+			"sections": {
+				"eligibility": {
+					"title": "1. Eligibility & Account Registration",
+					"minimumAge": {
+						"title": "1.1 Minimum Age",
+						"content": "You must be at least 13 years old (or the minimum age of digital consent in your jurisdiction, whichever is higher) and have a valid Google or Apple account to register. If you are under 18, you represent that you have obtained parental or guardian consent."
+					},
+					"oneAccount": {
+						"title": "1.2 One Account Per Person",
+						"content": "Each individual may maintain one Yournaly account. Account sharing is discouraged; if you share your credentials, you remain fully responsible for all activity under your account."
+					},
+					"accurateInfo": {
+						"title": "1.3 Accurate Information",
+						"content": "You agree to provide and maintain accurate, current, and complete information, including your legal name and a valid email address."
+					}
+				},
+				"serviceDescription": {
+					"title": "2. Service Description",
+					"content": "Yournaly is an AI-powered writing assistant that provides language-learning feedback, grammar suggestions, tone adjustments, readability improvements, and related features. Users submit text (\"User Content\") and receive AI-generated feedback (\"AI Output\"). The Service is intended for educational purposes only and not for professional advice."
+				},
+				"subscriptions": {
+					"title": "3. Subscriptions, \"Inks,\" and Payments",
+					"creditSystem": {
+						"title": "3.1 Credit System",
+						"content": "Usage is measured in virtual credits called \"Inks.\" Each new account receives 100 free Inks. When your balance reaches zero, you must purchase an Ink package to continue using the Service."
+					},
+					"packages": {
+						"title": "3.2 Packages & Pricing",
+						"content": "Ink packages, pricing, and the amount of Inks consumed per action are described within the Service. Astrobit may modify package pricing or consumption rates upon 30 days' notice via email or in-product messaging."
+					},
+					"paymentProcessing": {
+						"title": "3.3 Payment Processing",
+						"content": "Payments are processed by Stripe in U.S. dollars (USD). Taxes, duties, and exchange fees are your responsibility."
+					},
+					"refunds": {
+						"title": "3.4 Refunds",
+						"content": "If we fail to deliver purchased Inks to your account within a reasonable time (normally < 5 minutes), you may request a refund by emailing pablo@goastrobit.com within 30 days of purchase. Approved refunds are credited to your original payment method."
+					}
+				},
+				"license": {
+					"title": "4. License & Intellectual Property",
+					"contentLicense": {
+						"title": "4.1 Your Content License to Us",
+						"content": "You retain ownership of your User Content. By submitting User Content, you grant Astrobit a worldwide, non-exclusive, royalty-free license to (a) host, store, display, and process the content to provide and improve the Service; (b) create aggregated, de-identified data for analytics and product development; and (c) comply with legal obligations."
+					},
+					"aiOutput": {
+						"title": "4.2 AI Output",
+						"content": "Subject to these Terms and your payment of applicable fees, Astrobit assigns to you any intellectual-property rights it may have in the AI Output generated specifically for you, to the extent permitted by applicable law and third-party model licenses. You acknowledge that AI Output may be similar or identical to output provided to other users."
+					},
+					"serviceIP": {
+						"title": "4.3 Service IP",
+						"content": "The Service, including all software, logos, trademarks, and content (excluding User Content), is owned by Astrobit or its licensors and is protected by intellectual-property laws. No rights are granted except as expressly set out in these Terms."
+					}
+				},
+				"prohibitedConduct": {
+					"title": "5. Prohibited Conduct",
+					"intro": "You must not:",
+					"items": [
+						"Use the Service for any unlawful, harmful, harassing, hate-related, defamatory, obscene, or otherwise objectionable purpose;",
+						"Upload or transmit any content that infringes third-party rights or privacy;",
+						"Attempt to reverse-engineer, decompile, or disassemble any part of the Service;",
+						"Interfere with or disrupt the Service, servers, or networks;",
+						"Bypass or breach security or usage-limit measures."
+					],
+					"reservation": "We reserve the right to suspend or terminate accounts engaged in prohibited conduct and to report illegal activity to law-enforcement authorities."
+				},
+				"dataPrivacy": {
+					"title": "6. Data Privacy & Security",
+					"dataCollected": {
+						"title": "6.1 Data Collected",
+						"content": "We collect your email address, first and last name (from your OAuth provider), User Content, usage metrics, and payment-related data. See our Privacy Policy for full details."
+					},
+					"processors": {
+						"title": "6.2 Processors",
+						"content": "We use OpenAI (text processing), Stripe (payments), Google Cloud Platform (infrastructure), and Render (PostgreSQL database in Virginia, USA) as sub-processors."
+					},
+					"dataRetention": {
+						"title": "6.3 Data Retention",
+						"content": "We store User Content indefinitely unless you delete it or request deletion. Back-ups are retained for disaster-recovery purposes. Soft-deleted data may persist in back-ups for up to 30 days."
+					},
+					"dataRequests": {
+						"title": "6.4 Data Requests",
+						"content": "You may request access to or deletion of your personal data by emailing pablo@goastrobit.com. We will comply unless retention is required by law."
+					}
+				},
+				"disclaimers": {
+					"title": "7. Disclaimers",
+					"educationalUse": {
+						"title": "7.1 Educational Use Only",
+						"content": "The Service is provided for language-learning and educational purposes. It does not constitute professional, legal, medical, or other expert advice."
+					},
+					"aiLimitations": {
+						"title": "7.2 AI Limitations",
+						"content": "AI Output is generated by large-language models (currently provided by OpenAI) and may contain errors, biases, or outdated information. You are solely responsible for reviewing and verifying AI Output before relying on it."
+					},
+					"noWarranty": {
+						"title": "7.3 No Warranty",
+						"content": "The Service is provided \"AS IS\" and \"AS AVAILABLE\" without warranties of any kind, express or implied, including fitness for a particular purpose, accuracy, or non-infringement."
+					}
+				},
+				"limitationOfLiability": {
+					"title": "8. Limitation of Liability",
+					"content": "To the maximum extent permitted by law, Astrobit and its affiliates, officers, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or for loss of profits, revenues, data, or goodwill. Astrobit's total liability arising out of or related to the Service shall not exceed the greater of (a) USD 100 or (b) the amount you paid to Astrobit for the Service in the 12 months preceding the claim. Some jurisdictions do not allow certain limitations, so portions of this section may not apply to you."
+				},
+				"governingLaw": {
+					"title": "9. Governing Law & Dispute Resolution",
+					"governingLaw": {
+						"title": "9.1 Governing Law",
+						"content": "These Terms are governed by the laws of the State of Delaware, USA, without regard to conflict-of-law principles."
+					},
+					"informalResolution": {
+						"title": "9.2 Informal Resolution",
+						"content": "Before filing a claim, you agree to attempt to resolve the dispute informally by emailing pablo@goastrobit.com. If unresolved after 30 days, either party may initiate arbitration."
+					},
+					"bindingArbitration": {
+						"title": "9.3 Binding Arbitration & Class-Action Waiver",
+						"content": "Any dispute arising out of or relating to these Terms or the Service shall be finally settled by binding arbitration administered by JAMS pursuant to its Streamlined Rules. The arbitration will take place in Wilmington, Delaware, USA, or via video conference if travel is impractical. YOU AND ASTROBIT WAIVE THE RIGHT TO A JURY TRIAL AND TO PARTICIPATE IN CLASS-ACTION PROCEEDINGS."
+					},
+					"smallClaims": {
+						"title": "9.4 Small-Claims Option",
+						"content": "Either party may bring individual claims in small-claims court in New Castle County, Delaware, if the claim qualifies."
+					}
+				},
+				"termination": {
+					"title": "10. Termination",
+					"byYou": {
+						"title": "10.1 By You",
+						"content": "You may stop using the Service at any time and request account deletion."
+					},
+					"byUs": {
+						"title": "10.2 By Us",
+						"content": "We may suspend or terminate your access (with or without notice) if you violate these Terms or if we discontinue the Service. Unused purchased Inks are non-refundable except as required by law."
+					}
+				},
+				"modifications": {
+					"title": "11. Modifications",
+					"content": "We may revise these Terms from time to time. If we make material changes, we will notify you via email at least 30 days before the revised Terms take effect. Continued use after the effective date constitutes acceptance."
+				},
+				"forceMajeure": {
+					"title": "12. Force Majeure",
+					"content": "Astrobit will not be liable for any delay or failure to perform due to events beyond its reasonable control, including natural disasters, internet outages, labor disputes, or governmental actions."
+				},
+				"assignment": {
+					"title": "13. Assignment",
+					"content": "Astrobit may assign or transfer these Terms, in whole or in part, to a successor or acquirer. You may not assign your rights or obligations without our prior written consent."
+				},
+				"entireAgreement": {
+					"title": "14. Entire Agreement & Severability",
+					"content": "These Terms constitute the entire agreement between you and Astrobit regarding the Service and supersede any prior agreements. If any provision is found unenforceable, the remaining provisions will remain in full force and effect."
+				},
+				"contactInfo": {
+					"title": "15. Contact Information",
+					"intro": "For questions, support, or legal notices:",
+					"company": "Astrobit LLC",
+					"address": "131 Continental Dr, Suite 305",
+					"cityState": "Newark, DE 19713, USA",
+					"email": "Email: pablo@goastrobit.com (support & legal)"
+				}
+			}
+		},
+		"aboutUs": {
+			"howToUse": {
+				"title": "1. How to use Yournaly",
+				"description": "Yournaly provides you with several customizable parameters to help you review and improve your journal entries. You can configure these settings on the Preferences page to personalize your journaling experience.",
+				"mainParameters": {
+					"title": "Main Parameters:",
+					"language": {
+						"title": "a. Language:",
+						"description": "This controls the language of your interface and the feedback provided by Yournaly. Choose the language you're most comfortable with for navigating the app."
+					},
+					"targetLanguage": {
+						"title": "b. Target Language:",
+						"description": "This is the language you want to learn or practice. Yournaly will review your journal entries and provide corrected text based on this target language. This setting is independent from the interface Language setting above."
+					},
+					"tone": {
+						"title": "c. Tone:",
+						"description": "This defines the writing style you want to achieve. Yournaly will review your entries and provide suggestions that match your chosen tone (e.g., formal, casual, creative, etc.)."
+					}
+				},
+				"tip": "Tip: Take some time to explore these settings in the Preferences page. The right combination of Language, Target Language, and Tone will help you get the most out of your journaling experience."
+			},
+			"about": {
+				"title": "2. About Us",
+				"description": "Yournaly is a personal journaling app designed to help you express yourself while improving your writing skills. Our AI-powered review system provides suggestions to enhance your journal entries, making journaling both a creative and educational experience."
+			},
+			"legal": {
+				"title": "3. Legal",
+				"termsOfService": "Terms of Service",
+				"privacyPolicy": "Privacy Policy"
+			},
+			"contact": {
+				"title": "4. Contact Us",
+				"description": "Have questions or feedback? We'd love to hear from you!"
+			}
+		},
+		"privacyPolicy": {
+			"title": "Privacy Policy",
+			"lastUpdated": "Last updated: 20 July 2025",
+			"intro": "This Privacy Policy (\"Policy\") explains how Astrobit LLC (\"Astrobit\", \"we\", \"our\", or \"us\") collects, uses, shares, and safeguards information when you access or use Yournaly—our browser extension, websites, mobile applications, and related services (collectively, the \"Service\"). By using the Service, you acknowledge that you have read and understood this Policy.",
+			"sections": {
+				"whoWeAre": {
+					"title": "1. Who We Are",
+					"dataController": "Data Controller: Astrobit LLC",
+					"address": "Address: 131 Continental Dr, Suite 305, Newark, DE 19713, USA",
+					"email": "Email: pablo@goastrobit.com"
+				},
+				"informationWeCollect": {
+					"title": "2. Information We Collect",
+					"intro": "We do not intentionally collect sensitive personal data (e.g., race, political opinions, health data). We encourage users not to include sensitive data in User Content.",
+					"categories": {
+						"accountInformation": {
+							"title": "Account Information",
+							"dataElements": "• Email address\n• First & last name",
+							"source": "OAuth providers (Google, Apple)",
+							"purpose": "Account creation, authentication, support"
+						},
+						"userContent": {
+							"title": "User Content",
+							"dataElements": "• Text entries submitted for AI review",
+							"source": "You",
+							"purpose": "Provide AI feedback, store journals, improve Service"
+						},
+						"usageData": {
+							"title": "Usage Data",
+							"dataElements": "• Ink balance\n• Interaction logs (features used, timestamps)",
+							"source": "Automatic",
+							"purpose": "Service operation, analytics, fraud prevention"
+						},
+						"paymentData": {
+							"title": "Payment Data",
+							"dataElements": "• Transaction IDs\n• Amounts & currency\n• Partial card details (tokenized)",
+							"source": "Stripe",
+							"purpose": "Process payments, refunds, accounting"
+						},
+						"technicalData": {
+							"title": "Technical Data",
+							"dataElements": "• Browser type & version\n• Operating system\n• IP address\n• Language settings\n• Extension version",
+							"source": "Automatic",
+							"purpose": "Security, diagnostics, analytics"
+						}
+					}
+				},
+				"howWeUse": {
+					"title": "3. How We Use Your Information",
+					"intro": "We process information to:",
+					"purposes": [
+						"Provide & Operate the Service, including generating AI feedback and managing Ink credits.",
+						"Improve & Personalise the Service through aggregated analytics and machine learning.",
+						"Process Payments and maintain accurate billing and accounting records.",
+						"Communicate with you about updates, security alerts, and support requests.",
+						"Detect & Prevent Fraud and abuse, enforce our Terms of Service, and protect the integrity of the Service.",
+						"Comply with Legal Obligations, including tax and regulatory requirements."
+					]
+				},
+				"legalBases": {
+					"title": "4. Legal Bases for Processing (EEA/UK Users)",
+					"intro": "We rely on the following legal grounds under the GDPR:",
+					"bases": [
+						"Contract: Processing necessary to perform our contract with you (e.g., providing the Service).",
+						"Legitimate Interests: Improving the Service, securing our systems, and preventing fraud (balanced against your rights).",
+						"Consent: Where we rely on optional cookies or send marketing emails (you may withdraw consent at any time).",
+						"Legal Obligation: Compliance with applicable laws (e.g., accounting, taxation)."
+					]
+				},
+				"sharingDisclosure": {
+					"title": "5. Sharing & Disclosure",
+					"intro": "We do not sell your personal data. We disclose information only as described:",
+					"serviceProviders": {
+						"title": "1. Service Providers & Sub-Processors",
+						"providers": [
+							"OpenAI, L.L.C. – language model processing",
+							"Stripe, Inc. – payment processing",
+							"Google Cloud Platform & Render – hosting & database (USA)"
+						],
+						"note": "Service providers access data solely to perform services on our behalf and are bound by confidentiality obligations."
+					},
+					"affiliates": {
+						"title": "2. Affiliates & Business Transfers",
+						"content": "We may share data with subsidiaries or in connection with a merger, acquisition, or asset sale. You will be notified of any material changes."
+					},
+					"legalSafety": {
+						"title": "3. Legal & Safety",
+						"content": "We may disclose information if required by law, subpoena, or to protect the rights, property, or safety of Astrobit, our users, or others."
+					}
+				},
+				"internationalTransfers": {
+					"title": "6. International Data Transfers",
+					"content": "Astrobit is headquartered in the United States. If you reside outside the U.S., your information will be transferred to and stored in the U.S. and potentially other countries. For EEA/UK data, we rely on Standard Contractual Clauses or an adequacy decision to ensure an equivalent level of protection."
+				},
+				"dataRetention": {
+					"title": "7. Data Retention",
+					"activeData": "Active Data: Retained as long as your account is active or as needed to provide the Service.",
+					"deletedEntries": "Deleted Entries: Soft-deleted in the UI but removable upon request; backups may persist ≤ 30 days.",
+					"legalAccounting": "Legal & Accounting Records: Retained per statutory requirements (typically 7 years)."
+				},
+				"yourRights": {
+					"title": "8. Your Rights & Choices",
+					"intro": "Depending on your jurisdiction, you may have the right to:",
+					"rights": [
+						"Access the personal data we hold about you.",
+						"Rectify inaccuracies.",
+						"Delete your data (right to erasure).",
+						"Restrict or object to processing.",
+						"Port your data to another service.",
+						"Opt-out of marketing communications at any time."
+					],
+					"contact": "To exercise these rights, email pablo@goastrobit.com. We will respond within 30 days (or the timeframe required by law).",
+					"california": {
+						"title": "California Residents (CCPA/CPRA)",
+						"content": "Astrobit does not sell personal information. You have the right to know, delete, and correct your personal information, and to limit use of sensitive information. Submit requests via pablo@goastrobit.com."
+					}
+				},
+				"securityMeasures": {
+					"title": "9. Security Measures",
+					"intro": "We implement administrative, technical, and physical safeguards, including:",
+					"measures": [
+						"TLS/HTTPS encryption in transit;",
+						"Encryption at rest for sensitive fields;",
+						"Role-based access controls;",
+						"Regular vulnerability scanning and penetration testing;",
+						"Daily encrypted backups."
+					],
+					"disclaimer": "Despite efforts, no method of transmission or storage is 100% secure. You use the Service at your own risk."
+				},
+				"childrenPrivacy": {
+					"title": "10. Children's Privacy",
+					"content": "The Service is not directed to children under 13 (or under 16 in certain jurisdictions). We do not knowingly collect personal data from children. If you believe a child has provided us data, contact pablo@goastrobit.com and we will delete it."
+				},
+				"thirdPartyLinks": {
+					"title": "11. Third-Party Links & Services",
+					"content": "The Service may contain links to third-party sites or use third-party integrations (e.g., Google OAuth). We are not responsible for the privacy practices of those parties. Review their policies before providing data."
+				},
+				"cookiesTracking": {
+					"title": "12. Cookies & Tracking Technologies",
+					"content": "Our public website may use cookies or similar technologies to remember preferences and compile aggregated analytics. Browser settings allow you to control cookies. The Yournaly extension stores local data on your device to operate (e.g., session tokens, Ink balance)."
+				},
+				"changesToPolicy": {
+					"title": "13. Changes to This Policy",
+					"content": "We may update this Policy periodically. If changes are material, we will notify you via email at least 30 days before they take effect. Continued use after the effective date constitutes acceptance."
+				},
+				"contactUs": {
+					"title": "14. Contact Us",
+					"intro": "Questions or concerns?",
+					"company": "Astrobit LLC – Privacy",
+					"address": "131 Continental Dr, Suite 305",
+					"cityState": "Newark, DE 19713, USA",
+					"email": "Email: pablo@goastrobit.com"
+				},
+				"thankYou": {
+					"content": "Thank you for trusting Yournaly by Astrobit to support your language-learning journey."
+				}
+			}
+		},
+		"toast": {
+			"copiedText": "Copied reviewed Yournal to clipboard!",
+			"updatePreference": "Updated your preferences successfully!",
+			"savePreference": "Saved your preferences successfully!",
+			"saveErrorPreference": "There was an error trying to save your preferences!"
+		},
+		"logOut": {
+			"title": "Confirm Logout",
+			"description": "Are you sure you want to logout from this session? Your Yournals will remain saved and you can access them when you log back in."
+		},
+		"textBox": {
+			"characters": "characters",
+			"states": {
+				"before": {
+					"title": "Your Yournal",
+					"placeholder": "Share what's on your mind, we'll love to hear it..."
+				},
+				"after": {
+					"title": "Reviewed Yournal",
+					"placeholder": "This is your reviewed Yournal..."
+				}
+			},
+			"actions": {
+				"copy": "Copy Text",
+				"compare": "Compare Text",
+				"hide": "Hide Original"
+			}
+		},
+		"navbar": {
+			"home": "Home",
+			"myYournals": "Yournals",
+			"yournalSummary": "Summary",
+			"preferences": "Preferences",
+			"about": "About",
+			"purchase": "Purchase Inks",
+			"logOut": "Log Out"
+		},
+		"footer": {
+			"description": "Made with 🤍 by"
+		},
+		"controlPanel": {
+			"showAdvanced": "Show Advanced Options",
+			"hideAdvanced": "Hide Advanced Options",
+			"estimatedInks": "Estimated Inks usage",
+			"actions": {
+				"review": "Review my Yournal",
+				"summary": "Yournal Summary",
+				"newEntry": "Write new Yournal"
+			}
+		},
+		"packageCard": {
+			"recommended": "Recommended",
+			"select": "Select",
+			"selected": "Selected"
+		},
+		"modals": {
+			"deleteJournal": {
+				"description": "Are you sure you want to delete this Yournal? This action cannot be undone."
+			}
+		}
+	},
+	"constants": {
+		"languages": {
+			"en": "English",
+			"es": "Spanish",
+			"pt": "Portuguese",
+			"it": "Italian",
+			"fr": "French"
+		},
+		"tones": {
+			"original": "Original",
+			"professional": "Professional",
+			"educational": "Educational",
+			"friendly": "Friendly",
+			"serious": "Serious"
+		},
+		"sorting": {
+			"page": "Page",
+			"pageOf": "of",
+			"options": {
+				"dateNewest": "Date (Newest to Oldest)",
+				"dateOldest": "Date (Oldest to Newest)",
+				"scoreHighest": "Score (Highest to Lowest)",
+				"scoreLowest": "Score (Lowest to Highest)",
+				"inkHighest": "Inks (Highest to Lowest)",
+				"inkLowest": "Inks (Lowest to Highest)"
+			}
+		},
+		"mistakeTypes": {
+			"grammar": "Grammar",
+			"vocabulary": "Vocabulary",
+			"punctuation": "Punctuation",
+			"wordChoice": "Word Choice",
+			"wordUsage": "Word Usage",
+			"wordForm": "Word Form",
+			"wordMeaning": "Word Meaning",
+			"spelling": "Spelling",
+			"sentenceStructure": "Sentence Structure"
+		},
+		"themes": {
+			"default": "Default"
+		},
+		"packages": {
+			"occasional": {
+				"title": "Ocassional Users",
+				"description": "Perfect for occasional users who need a small boost for their journaling experience."
+			},
+			"regular": {
+				"title": "Regular Users",
+				"description": "Ideal for regular users who journal frequently and want consistent feedback."
+			},
+			"power": {
+				"title": "Power Users",
+				"description": "Best value for power users who want to maximize their journaling potential."
+			}
+		}
+	},
+	"common": {
+		"params": {
+			"tone": "Tone",
+			"language": "Language",
+			"targetLanguage": "Target Language",
+			"improveReadability": "Improve Readability",
+			"inksUsed": "Inks Used",
+			"theme": "Yournaly Theme",
+			"advancedParams": {
+				"textLength": "Text Length",
+				"textShorten": "Shorten",
+				"textExtend": "Extend",
+				"minCharacters": "Min. Characters",
+				"maxCharacters": "Max. Characters"
+			},
+			"none": "N/A"
+		},
+		"actions": {
+			"save": "Save",
+			"confirm": "Confirm",
+			"cancel": "Cancel",
+			"delete": "Delete Yournal"
+		},
+		"states": {
+			"processing": "Processing...",
+			"loading": "Please wait a minute..."
+		},
+		"dates": {
+			"today": "Today",
+			"yesterday": "Yesterday",
+			"daysAgo": "{{number}} days ago"
+		},
+		"misc": {
+			"inks": "Inks",
+			"and": "and"
+		}
+	}
+}

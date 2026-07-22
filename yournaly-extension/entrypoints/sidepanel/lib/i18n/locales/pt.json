@@ -1,0 +1,426 @@
+{
+	"pages": {
+		"authPage": {
+			"title": "Bem-vindo ao seu espaço pessoal de escrita",
+			"description": "Deixe a criatividade fluir enquanto você aprende.",
+			"actions": {
+				"google": "Continuar com o Google",
+				"apple": "Continuar com a Apple"
+			}
+		},
+		"mainPage": {
+			"title": "Olá {{name}}, o que está na sua mente hoje?",
+			"description": "Este é o seu espaço, sua zona segura para se expressar. Use este espaço para escrever o que quiser e o Yournaly ajudará você a melhorar suas habilidades de escrita.",
+			"notEnoughInks": "Você não tem Inks suficientes para revisar seu Yournal. Você precisa de {{required}} Inks para revisá-lo. Você pode comprar mais Inks na página de Compra."
+		},
+		"myYournalsPage": {
+			"title": "Meus Yournals",
+			"description": "Revise e gerencie todos os seus Yournals criados.",
+			"emptyTitle": "Você ainda não tem Yournals",
+			"emptyDescription": "Incentivamos você a criar um novo Yournal a partir da página inicial."
+		},
+		"yournalSummaryPage": {
+			"insights": {
+				"title": "Resumo da Revisão",
+				"none": "Parabéns! Você está fazendo um ótimo progresso, não há erros significativos.",
+				"original": "Texto Original",
+				"suggestion": "Texto Sugerido",
+				"explanation": "Explicação"
+			},
+			"params": {
+				"title": "Parâmetros da Revisão"
+			}
+		},
+		"preferencesPage": {
+			"title": "Suas Preferências",
+			"description": "Você pode gerenciar suas preferências de aplicativo e usuário aqui. Essas configurações afetarão a revisão e o feedback do seu Yournal.",
+			"guides": {
+				"language": "Isso afeta o idioma da interface do Yournaly e o feedback fornecido.",
+				"targetLanguage": "Isso afeta o idioma do Yournal revisado.",
+				"theme": "Isso afeta a aparência da interface do Yournaly.",
+				"themeSoon": "Vários temas em breve!"
+			}
+		},
+		"purchasePage": {
+			"title": "Escolha seu Pacote de Tinta",
+			"description": "Selecione o pacote que melhor atende às suas necessidades e desbloqueie todo o potencial do Yournaly.",
+			"loading": "Desempacotando Pacotes de Tinta...",
+			"selectPackageError": "Por favor selecione um pacote antes de continuar",
+			"creatingSession": "Criando sessão de pagamento...",
+			"checkoutOpened": "Pagamento aberto em nova aba",
+			"waitingPayment": "Aguardando pagamento...",
+			"paymentCompleted": "Pagamento concluído!",
+			"paymentSuccess": "Pagamento bem-sucedido! Suas Tintas foram adicionadas à sua conta.",
+			"paymentExpired": "A sessão de pagamento expirou. Tente novamente.",
+			"paymentStatusError": "Não foi possível verificar o status do pagamento. Tente novamente.",
+			"paymentError": "O pagamento falhou. Tente novamente.",
+			"paymentTimeout": "A verificação do pagamento expirou após 5 minutos. Verifique seu pagamento e atualize se necessário.",
+			"loadError": "Falha ao carregar pacotes de tinta. Tente novamente.",
+			"pollingMessage": "Complete seu pagamento na aba aberta. Detectaremos automaticamente quando seu pagamento for bem-sucedido."
+		},
+		"aboutPage": {
+			"title": "Sobre o Yournaly",
+			"description": "Saiba mais sobre nós, nossa missão e visão.",
+			"about": "Yournaly é um aplicativo de diário pessoal projetado para ajudar você a se expressar enquanto melhora suas habilidades de escrita. Nosso sistema de revisão com inteligência artificial fornece sugestões para aprimorar suas entradas de diário, tornando o processo criativo e educativo ao mesmo tempo.",
+			"legalTitle": "Legal",
+			"contactTitle": "Fale Conosco",
+			"contact": "Tem dúvidas ou sugestões? Adoraríamos ouvir você!"
+		}
+	},
+	"components": {
+		"termsOfService": {
+			"title": "Termos de Serviço",
+			"lastUpdated": "Última atualização: 20 de julho de 2025",
+			"intro": "Estes Termos de Serviço (\"Termos\") regem seu acesso e uso da extensão do navegador Yournaly, serviços web, aplicações móveis e qualquer software ou sites associados (coletivamente, o \"Serviço\") fornecido pela Astrobit LLC (\"Astrobit\", \"nós\", \"nosso\" ou \"nos\"). Ao acessar ou usar o Serviço, você (\"você\" ou \"Usuário\") concorda em estar vinculado a estes Termos. Se você não concordar, não acesse ou use o Serviço.",
+			"sections": {
+				"eligibility": {
+					"title": "1. Elegibilidade e Registro de Conta",
+					"minimumAge": {
+						"title": "1.1 Idade Mínima",
+						"content": "Você deve ter pelo menos 13 anos (ou a idade mínima de consentimento digital em sua jurisdição, a que for maior) e ter uma conta válida do Google ou Apple para se registrar. Se você for menor de 18 anos, você declara que obteve o consentimento de seus pais ou tutores."
+					},
+					"oneAccount": {
+						"title": "1.2 Uma Conta Por Pessoa",
+						"content": "Cada indivíduo pode manter uma conta Yournaly. O compartilhamento de conta é desencorajado; se você compartilhar suas credenciais, você permanece totalmente responsável por toda a atividade sob sua conta."
+					},
+					"accurateInfo": {
+						"title": "1.3 Informações Precisas",
+						"content": "Você concorda em fornecer e manter informações precisas, atuais e completas, incluindo seu nome legal e um endereço de e-mail válido."
+					}
+				},
+				"serviceDescription": {
+					"title": "2. Descrição do Serviço",
+					"content": "Yournaly é um assistente de escrita alimentado por IA que fornece feedback para aprendizado de idiomas, sugestões de gramática, ajustes de tom, melhorias de legibilidade e recursos relacionados. Os usuários enviam texto (\"Conteúdo do Usuário\") e recebem feedback gerado por IA (\"Saída de IA\"). O Serviço é destinado apenas para fins educacionais e não para aconselhamento profissional."
+				},
+				"subscriptions": {
+					"title": "3. Assinaturas, \"Inks\" e Pagamentos",
+					"creditSystem": {
+						"title": "3.1 Sistema de Créditos",
+						"content": "O uso é medido em créditos virtuais chamados \"Inks\". Cada nova conta recebe 100 Inks gratuitos. Quando seu saldo chegar a zero, você deve comprar um pacote de Inks para continuar usando o Serviço."
+					},
+					"packages": {
+						"title": "3.2 Pacotes e Preços",
+						"content": "Os pacotes de Inks, preços e a quantidade de Inks consumidos por ação são descritos dentro do Serviço. A Astrobit pode modificar os preços dos pacotes ou taxas de consumo com 30 dias de antecedência por e-mail ou mensagens no produto."
+					},
+					"paymentProcessing": {
+						"title": "3.3 Processamento de Pagamentos",
+						"content": "Os pagamentos são processados pelo Stripe em dólares americanos (USD). Impostos, taxas e taxas de câmbio são de sua responsabilidade."
+					},
+					"refunds": {
+						"title": "3.4 Reembolsos",
+						"content": "Se não entregarmos os Inks comprados à sua conta dentro de um tempo razoável (normalmente < 5 minutos), você pode solicitar um reembolso enviando um e-mail para pablo@goastrobit.com dentro de 30 dias da compra. Reembolsos aprovados são creditados ao seu método de pagamento original."
+					}
+				},
+				"license": {
+					"title": "4. Licença e Propriedade Intelectual",
+					"contentLicense": {
+						"title": "4.1 Licença do Seu Conteúdo para Nós",
+						"content": "Você mantém a propriedade do seu Conteúdo do Usuário. Ao enviar Conteúdo do Usuário, você concede à Astrobit uma licença mundial, não exclusiva, livre de royalties para (a) hospedar, armazenar, exibir e processar o conteúdo para fornecer e melhorar o Serviço; (b) criar dados agregados e desidentificados para análise e desenvolvimento de produtos; e (c) cumprir obrigações legais."
+					},
+					"aiOutput": {
+						"title": "4.2 Saída de IA",
+						"content": "Sujeito a estes Termos e seu pagamento de taxas aplicáveis, a Astrobit cede a você quaisquer direitos de propriedade intelectual que possa ter na Saída de IA gerada especificamente para você, na medida permitida pela lei aplicável e licenças de modelos de terceiros. Você reconhece que a Saída de IA pode ser similar ou idêntica à saída fornecida a outros usuários."
+					},
+					"serviceIP": {
+						"title": "4.3 PI do Serviço",
+						"content": "O Serviço, incluindo todo software, logotipos, marcas comerciais e conteúdo (excluindo o Conteúdo do Usuário), é propriedade da Astrobit ou seus licenciadores e é protegido pelas leis de propriedade intelectual. Nenhum direito é concedido exceto conforme expressamente estabelecido nestes Termos."
+					}
+				},
+				"prohibitedConduct": {
+					"title": "5. Conduta Proibida",
+					"intro": "Você não deve:",
+					"items": [
+						"Usar o Serviço para qualquer propósito ilegal, prejudicial, assediador, relacionado ao ódio, difamatório, obsceno ou de outra forma objetável;",
+						"Fazer upload ou transmitir qualquer conteúdo que infrinja direitos ou privacidade de terceiros;",
+						"Tentar fazer engenharia reversa, descompilar ou desmontar qualquer parte do Serviço;",
+						"Interferir com ou perturbar o Serviço, servidores ou redes;",
+						"Contornar ou violar medidas de segurança ou limites de uso."
+					],
+					"reservation": "Reservamo-nos o direito de suspender ou encerrar contas envolvidas em conduta proibida e de reportar atividade ilegal às autoridades de aplicação da lei."
+				},
+				"dataPrivacy": {
+					"title": "6. Privacidade e Segurança de Dados",
+					"dataCollected": {
+						"title": "6.1 Dados Coletados",
+						"content": "Coletamos seu endereço de e-mail, nome e sobrenome (do seu provedor OAuth), Conteúdo do Usuário, métricas de uso e dados relacionados a pagamentos. Consulte nossa Política de Privacidade para detalhes completos."
+					},
+					"processors": {
+						"title": "6.2 Processadores",
+						"content": "Usamos OpenAI (processamento de texto), Stripe (pagamentos), Google Cloud Platform (infraestrutura) e Render (banco de dados PostgreSQL na Virgínia, EUA) como sub-processadores."
+					},
+					"dataRetention": {
+						"title": "6.3 Retenção de Dados",
+						"content": "Armazenamos o Conteúdo do Usuário indefinidamente a menos que você o delete ou solicite exclusão. Backups são retidos para fins de recuperação de desastres. Dados excluídos suavemente podem persistir em backups por até 30 dias."
+					},
+					"dataRequests": {
+						"title": "6.4 Solicitações de Dados",
+						"content": "Você pode solicitar acesso ou exclusão de seus dados pessoais enviando um e-mail para pablo@goastrobit.com. Cumpriremos a menos que a retenção seja exigida por lei."
+					}
+				},
+				"disclaimers": {
+					"title": "7. Disclaimer",
+					"educationalUse": {
+						"title": "7.1 Apenas para Uso Educacional",
+						"content": "O Serviço é fornecido para fins de aprendizado de idiomas e educacionais. Não constitui aconselhamento profissional, legal, médico ou outro tipo de aconselhamento especializado."
+					},
+					"aiLimitations": {
+						"title": "7.2 Limitações da IA",
+						"content": "A Saída de IA é gerada por modelos de linguagem de grande escala (atualmente fornecidos pela OpenAI) e pode conter erros, vieses ou informações desatualizadas. Você é inteiramente responsável por revisar e verificar a Saída de IA antes de confiar nela."
+					},
+					"noWarranty": {
+						"title": "7.3 Sem Garantia",
+						"content": "O Serviço é fornecido \"COMO ESTÁ\" e \"COMO DISPONÍVEL\" sem garantias de qualquer tipo, expressas ou implícitas, incluindo adequação para um propósito particular, precisão ou não violação."
+					}
+				},
+				"limitationOfLiability": {
+					"title": "8. Limitação de Responsabilidade",
+					"content": "Na máxima extensão permitida pela lei, a Astrobit e suas afiliadas, diretores, funcionários e agentes não serão responsáveis por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos, ou por perda de lucros, receitas, dados ou boa vontade. A responsabilidade total da Astrobit decorrente de ou relacionada ao Serviço não excederá o maior de (a) USD 100 ou (b) o valor que você pagou à Astrobit pelo Serviço nos 12 meses anteriores à reclamação. Algumas jurisdições não permitem certas limitações, então partes desta seção podem não se aplicar a você."
+				},
+				"governingLaw": {
+					"title": "9. Lei Aplicável e Resolução de Disputas",
+					"governingLaw": {
+						"title": "9.1 Lei Aplicável",
+						"content": "Estes Termos são regidos pelas leis do Estado de Delaware, EUA, sem consideração aos princípios de conflito de leis."
+					},
+					"informalResolution": {
+						"title": "9.2 Resolução Informal",
+						"content": "Antes de apresentar uma reclamação, você concorda em tentar resolver a disputa informalmente enviando um e-mail para pablo@goastrobit.com. Se não resolvida após 30 dias, qualquer parte pode iniciar arbitragem."
+					},
+					"bindingArbitration": {
+						"title": "9.3 Arbitragem Vinculante e Renúncia a Ações Coletivas",
+						"content": "Qualquer disputa decorrente de ou relacionada a estes Termos ou ao Serviço será finalmente resolvida por arbitragem vinculante administrada pela JAMS de acordo com suas Regras Simplificadas. A arbitragem ocorrerá em Wilmington, Delaware, EUA, ou por videoconferência se a viagem não for prática. VOCÊ E A ASTROBIT RENUNCIAM AO DIREITO A UM JULGAMENTO POR JÚRI E A PARTICIPAR DE PROCEDIMENTOS DE AÇÃO COLETIVA."
+					},
+					"smallClaims": {
+						"title": "9.4 Opção Tribunal de Pequenas Causas",
+						"content": "Qualquer parte pode trazer reclamações individuais ao tribunal de pequenas causas no Condado de New Castle, Delaware, se a reclamação se qualificar."
+					}
+				},
+				"termination": {
+					"title": "10. Rescisão",
+					"byYou": {
+						"title": "10.1 Por Você",
+						"content": "Você pode parar de usar o Serviço a qualquer momento e solicitar exclusão da sua conta."
+					},
+					"byUs": {
+						"title": "10.2 Por Nós",
+						"content": "Podemos suspender ou encerrar seu acesso (com ou sem aviso prévio) se você violar estes Termos ou se descontinuarmos o Serviço. Inks comprados não utilizados não são reembolsáveis exceto conforme exigido por lei."
+					}
+				},
+				"modifications": {
+					"title": "11. Modificações",
+					"content": "Podemos revisar estes Termos de tempos em tempos. Se fizermos mudanças materiais, notificaremos você por e-mail pelo menos 30 dias antes que os Termos revisados entrem em vigor. Uso continuado após a data efetiva constitui aceitação."
+				},
+				"forceMajeure": {
+					"title": "12. Força Maior",
+					"content": "A Astrobit não será responsável por qualquer atraso ou falha no cumprimento devido a eventos além de seu controle razoável, incluindo desastres naturais, interrupções de internet, disputas trabalhistas ou ações governamentais."
+				},
+				"assignment": {
+					"title": "13. Cessão",
+					"content": "A Astrobit pode ceder ou transferir estes Termos, no todo ou em parte, a um sucessor ou adquirente. Você não pode ceder seus direitos ou obrigações sem nosso consentimento prévio por escrito."
+				},
+				"entireAgreement": {
+					"title": "14. Acordo Completo e Severabilidade",
+					"content": "Estes Termos constituem o acordo completo entre você e a Astrobit com relação ao Serviço e substituem quaisquer acordos anteriores. Se qualquer disposição for considerada inexequível, as disposições restantes permanecerão em pleno vigor e efeito."
+				},
+				"contactInfo": {
+					"title": "15. Informações de Contato",
+					"intro": "Para perguntas, suporte ou notificações legais:",
+					"company": "Astrobit LLC",
+					"address": "131 Continental Dr, Suite 305",
+					"cityState": "Newark, DE 19713, USA",
+					"email": "E-mail: pablo@goastrobit.com (suporte e legal)"
+				}
+			}
+		},
+		"aboutUs": {
+			"howToUse": {
+				"title": "1. Como usar Yournaly",
+				"description": "Yournaly fornece vários parâmetros personalizáveis para ajudá-lo a revisar e melhorar suas entradas de diário. Você pode configurar essas configurações na página Preferências para personalizar sua experiência de escrita de diário.",
+				"mainParameters": {
+					"title": "Parâmetros Principais:",
+					"language": {
+						"title": "a. Idioma:",
+						"description": "Isso controla o idioma da sua interface e o feedback fornecido pelo Yournaly. Escolha o idioma com o qual você se sente mais confortável para navegar no aplicativo."
+					},
+					"targetLanguage": {
+						"title": "b. Idioma Alvo:",
+						"description": "Este é o idioma que você quer aprender ou praticar. Yournaly revisará suas entradas de diário e fornecerá texto corrigido baseado neste idioma alvo. Esta configuração é independente da configuração de Idioma da interface acima."
+					},
+					"tone": {
+						"title": "c. Tom:",
+						"description": "Isso define o estilo de escrita que você quer alcançar. Yournaly revisará suas entradas e fornecerá sugestões que correspondam ao seu tom escolhido (ex., formal, casual, criativo, etc.)."
+					}
+				},
+				"tip": "Dica: Reserve um tempo para explorar essas configurações na página Preferências. A combinação certa de Idioma, Idioma Alvo e Tom ajudará você a aproveitar ao máximo sua experiência de escrita de diário."
+			},
+			"about": {
+				"title": "2. Sobre Nós",
+				"description": "Yournaly é um aplicativo de diário pessoal projetado para ajudá-lo a se expressar enquanto melhora suas habilidades de escrita. Nosso sistema de revisão alimentado por IA fornece sugestões para melhorar suas entradas de diário, tornando a escrita de diário tanto uma experiência criativa quanto educacional."
+			},
+			"legal": {
+				"title": "3. Legal",
+				"termsOfService": "Termos de Serviço",
+				"privacyPolicy": "Política de Privacidade"
+			},
+			"contact": {
+				"title": "4. Entre em Contato",
+				"description": "Tem perguntas ou feedback? Adoraríamos ouvir de você!"
+			}
+		},
+		"privacyPolicy": {
+			"title": "Política de Privacidade"
+		},
+		"toast": {
+			"copiedText": "Yournal revisado copiado para a área de transferência!",
+			"updatePreference": "Suas preferências foram atualizadas com sucesso!",
+			"savePreference": "Suas preferências foram salvas com sucesso!",
+			"saveErrorPreference": "Ocorreu um erro ao salvar suas preferências!"
+		},
+		"logOut": {
+			"title": "Confirmar Logout",
+			"description": "Tem certeza de que deseja sair desta sessão? Seus Yournals permanecerão salvos e você poderá acessá-los novamente ao fazer login."
+		},
+		"textBox": {
+			"characters": "caracteres",
+			"states": {
+				"before": {
+					"title": "Seu Yournal",
+					"placeholder": "Compartilhe o que está em sua mente, vamos adorar ouvir..."
+				},
+				"after": {
+					"title": "Yournal Revisado",
+					"placeholder": "Este é o seu Yournal revisado..."
+				}
+			},
+			"actions": {
+				"copy": "Copiar Texto",
+				"compare": "Comparar Texto",
+				"hide": "Ocultar Original"
+			}
+		},
+		"navbar": {
+			"home": "Início",
+			"myYournals": "Yournals",
+			"yournalSummary": "Resumo",
+			"preferences": "Preferências",
+			"about": "Sobre o",
+			"logOut": "Sair"
+		},
+		"footer": {
+			"description": "Feito com 🤍 por"
+		},
+		"controlPanel": {
+			"showAdvanced": "Mostrar Opções Avançadas",
+			"hideAdvanced": "Ocultar Opções Avançadas",
+			"estimatedInks": "Inks Estimados",
+			"actions": {
+				"review": "Revisar meu Yournal",
+				"summary": "Resumo do Yournal",
+				"newEntry": "Escrever novo Yournal"
+			}
+		},
+		"packageCard": {
+			"recommended": "Recomendado",
+			"select": "Selecionar",
+			"selected": "Selecionado"
+		},
+		"modals": {
+			"deleteJournal": {
+				"description": "Tem certeza de que deseja deletar este Yournal? Esta ação não pode ser desfeita."
+			}
+		}
+	},
+	"constants": {
+		"languages": {
+			"en": "Inglês",
+			"es": "Espanhol",
+			"pt": "Português",
+			"it": "Italiano",
+			"fr": "Francês"
+		},
+		"tones": {
+			"original": "Original",
+			"professional": "Profissional",
+			"educational": "Educacional",
+			"friendly": "Amigável",
+			"serious": "Sério"
+		},
+		"sorting": {
+			"page": "Página",
+			"pageOf": "de",
+			"options": {
+				"dateNewest": "Data (Mais recentes primeiro)",
+				"dateOldest": "Data (Mais antigas primeiro)",
+				"scoreHighest": "Pontuação (Maior para Menor)",
+				"scoreLowest": "Pontuação (Menor para Maior)",
+				"inkHighest": "Inks (Mais para Menos)",
+				"inkLowest": "Inks (Menos para Mais)"
+			}
+		},
+		"mistakeTypes": {
+			"grammar": "Gramática",
+			"vocabulary": "Vocabulário",
+			"punctuation": "Pontuação",
+			"wordChoice": "Escolha de Palavras",
+			"wordUsage": "Uso de Palavras",
+			"wordForm": "Forma da Palavra",
+			"wordMeaning": "Significado da Palavra",
+			"spelling": "Ortografia",
+			"sentenceStructure": "Estrutura da Frase"
+		},
+		"themes": {
+			"default": "Padrão"
+		},
+		"packages": {
+			"occasional": {
+				"title": "Usuários Ocasionales",
+				"description": "Perfeito para usuários ocasionales que precisam de um pequeno impulso para sua experiência de escrita."
+			},
+			"regular": {
+				"title": "Usuários Regulares",
+				"description": "Ideal para usuários regulares que escrevem frequentemente e desejam feedback constante."
+			},
+			"power": {
+				"title": "Usuários Exigentes",
+				"description": "Melhor valor para usuários que desejam maximizar seu potencial de escrita."
+			}
+		}
+	},
+	"common": {
+		"params": {
+			"tone": "Tom",
+			"language": "Idioma",
+			"targetLanguage": "Idioma Alvo",
+			"improveReadability": "Melhorar Legibilidade",
+			"inksUsed": "Inks Usados",
+			"theme": "Tema do Yournaly",
+			"advancedParams": {
+				"textLength": "Comprimento do Texto",
+				"textShorten": "Encurtar",
+				"textExtend": "Estender",
+				"minCharacters": "Mín. Caracteres",
+				"maxCharacters": "Máx. Caracteres"
+			},
+			"none": "N/A"
+		},
+		"actions": {
+			"save": "Salvar",
+			"confirm": "Confirmar",
+			"cancel": "Cancelar",
+			"delete": "Deletar Yournal"
+		},
+		"states": {
+			"processing": "Processando...",
+			"loading": "Aguarde um momento..."
+		},
+		"dates": {
+			"today": "Hoje",
+			"yesterday": "Ontem",
+			"daysAgo": "Há {{number}} dias"
+		},
+		"misc": {
+			"inks": "Inks",
+			"and": "e"
+		}
+	}
+}
