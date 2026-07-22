@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+:is(h1, h2, h3, h4, h5, h6) {
+	font-family: 'Delius Swash Caps', cursive;
+	font-weight: 400;
+	font-style: normal;
+	color: var(--color-primary-600);
+}
+
+:is(body) {
+	font-family: 'Noto Sans', sans-serif;
+	background-color: var(--color-surface-50);
+	color: var(--color-primary-800);
+	--tw-leading: 1.625;
+	line-height: 1.625;
+}
+
+:is(button) {
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: not-allowed;
+}
+
+@theme {
+	/* Primary */
+	--color-primary-50: #fcf8f0;
+	--color-primary-100: #f8eedc;
+	--color-primary-200: #f0dab8;
+	--color-primary-300: #e7c18a;
+	--color-primary-400: #dda15e;
+	--color-primary-500: #d5863a;
+	--color-primary-600: #c66f30;
+	--color-primary-700: #a55729;
+	--color-primary-800: #844628;
+	--color-primary-900: #6b3b23;
+	--color-primary-950: #391c11;
+
+	/* Secondary */
+	--color-secondary-50: #fcf8ee;
+	--color-secondary-100: #f6ebcf;
+	--color-secondary-200: #ecd79b;
+	--color-secondary-300: #e3bd66;
+	--color-secondary-400: #dca743;
+	--color-secondary-500: #d38a2d;
+	--color-secondary-600: #bc6c25;
+	--color-secondary-700: #9b4e22;
+	--color-secondary-800: #7f3f21;
+	--color-secondary-900: #69341e;
+	--color-secondary-950: #3b1a0d;
+
+	/* Surface */
+	--color-surface-50: #fefae0;
+	--color-surface-100: #fff7c2;
+	--color-surface-200: #ffec89;
+	--color-surface-300: #ffd945;
+	--color-surface-400: #fdc412;
+	--color-surface-500: #edaa05;
+	--color-surface-600: #cc8202;
+	--color-surface-700: #a35b05;
+	--color-surface-800: #86480d;
+	--color-surface-900: #723b11;
+	--color-surface-950: #431d05;
+}

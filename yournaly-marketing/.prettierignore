@@ -1,0 +1,18 @@
+# Directories
+/dist
+/node_modules
+/build
+/public
+.vscode
+
+# Files
+.git
+.husky
+.prettierignore
+.prettierrc
+.prettierignore
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
