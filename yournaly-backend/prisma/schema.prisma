@@ -1,0 +1,285 @@
+generator client {
+  provider      = "prisma-client-js"
+  output        = "../src/generated/prisma"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Organization {
+  id               String    @id @default(uuid()) @map("id")
+  name             String    @map("name")
+  contactEmail     String    @unique @map("contact_email")
+  organizationCode String    @unique @map("organization_code")
+  apiKey           String    @unique @map("api_key")
+  logoUrl          String?   @map("logo_url")
+  isActive         Boolean   @default(true) @map("is_active")
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt        DateTime? @map("deleted_at")
+
+  organizationTones     OrganizationTones[]
+  organizationLanguages OrganizationLanguages[]
+  organizationSettings  OrganizationSettings?
+  organizationUsers     OrganizationUsers[]
+
+  @@map("organization")
+}
+
+model OrganizationTones {
+  id             String    @id @default(uuid()) @map("id")
+  organizationId String    @map("organization_id")
+  toneCode       String    @map("tone_code")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt      DateTime? @map("deleted_at")
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@unique([organizationId, toneCode])
+  @@map("organization_tones")
+}
+
+model OrganizationLanguages {
+  id             String    @id @default(uuid()) @map("id")
+  organizationId String    @map("organization_id")
+  languageCode   String    @map("language_code")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt      DateTime? @map("deleted_at")
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@unique([organizationId, languageCode])
+  @@map("organization_languages")
+}
+
+model OrganizationSettings {
+  id               String    @id @default(uuid()) @map("id")
+  organizationId   String    @unique @map("organization_id")
+  businessPlan     String    @map("business_plan")
+  subscriptionPlan String?   @map("subscription_plan")
+  maxCharacters    Int       @default(2500) @map("max_characters")
+  llmModel         String    @default("gpt-4.1-nano") @map("llm_model")
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt        DateTime? @map("deleted_at")
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@map("organization_settings")
+}
+
+model Users {
+  id                 String    @id @default(uuid()) @map("id")
+  email              String    @unique @map("email")
+  password           String?   @map("password")
+  firstName          String    @map("first_name")
+  lastName           String    @map("last_name")
+  avatarUrl          String?   @map("avatar_url")
+  onboardingComplete Boolean   @default(true) @map("onboarding_complete")
+  isEmailVerified    Boolean   @default(true) @map("is_email_verified")
+  isActive           Boolean   @default(true) @map("is_active")
+  createdAt          DateTime  @default(now()) @map("created_at")
+  updatedAt          DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt          DateTime? @map("deleted_at")
+
+  userProviders     UserProviders[]
+  userPreferences   UserPreferences?
+  userWallet        UserWallets?
+  userTransactions  UserTransactions[]
+  organizationUsers OrganizationUsers[]
+  journals          Journals[]
+
+  @@map("users")
+}
+
+model UserProviders {
+  id             String    @id @default(uuid()) @map("id")
+  userId         String    @map("user_id")
+  provider       String    @map("provider")
+  providerUserId String    @map("provider_user_id")
+  email          String    @map("email")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt      DateTime? @map("deleted_at")
+
+  user Users @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerUserId])
+  @@map("user_providers")
+}
+
+model UserPreferences {
+  id                    String    @id @default(uuid()) @map("id")
+  userId                String    @unique @map("user_id")
+  defaultLanguage       String    @default("en") @map("default_language")
+  defaultTone           String    @default("original") @map("default_tone")
+  defaultTargetLanguage String    @default("en") @map("default_target_language")
+  uiTheme               String    @default("default") @map("ui_theme")
+  createdAt             DateTime  @default(now()) @map("created_at")
+  updatedAt             DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt             DateTime? @map("deleted_at")
+
+  user Users @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_preferences")
+}
+
+model UserWallets {
+  id                String    @id @default(uuid()) @map("id")
+  userId            String    @unique @map("user_id")
+  currentInks       Int       @default(0) @map("current_inks")
+  totalAcquiredInks Int       @default(0) @map("total_acquired_inks")
+  totalSpentInks    Int       @default(0) @map("total_spent_inks")
+  createdAt         DateTime  @default(now()) @map("created_at")
+  updatedAt         DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt         DateTime? @map("deleted_at")
+
+  user Users @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_wallets")
+}
+
+model UserTransactions {
+  id              String    @id @default(uuid()) @map("id")
+  userId          String    @map("user_id")
+  stripePaymentId String    @unique @map("stripe_payment_id")
+  amount          Decimal   @map("amount") @db.Decimal(10, 2)
+  currency        String    @default("USD") @map("currency")
+  status          String    @map("status")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt       DateTime? @map("deleted_at")
+
+  user Users @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("user_transactions")
+}
+
+model OrganizationUsers {
+  id             String    @id @default(uuid()) @map("id")
+  organizationId String    @map("organization_id")
+  userId         String    @map("user_id")
+  userRole       String    @map("user_role")
+  isActive       Boolean   @default(true) @map("is_active")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt      DateTime? @map("deleted_at")
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user         Users        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId])
+  @@index([userId])
+  @@map("organization_users")
+}
+
+model InksPackages {
+  id              String    @id @default(uuid()) @map("id")
+  stripeProductId String    @unique @map("stripe_product_id")
+  title           String    @map("title")
+  description     String    @map("description")
+  inksToAdd       Int       @map("inks_to_add")
+  price           Decimal   @map("price") @db.Decimal(10, 2)
+  currency        String    @default("USD") @map("currency")
+  isRecommended   Boolean   @default(false) @map("is_recommended")
+  isActive        Boolean   @default(true) @map("is_active")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt       DateTime? @map("deleted_at")
+
+  @@map("inks_packages")
+}
+
+model Journals {
+  id            String    @id @default(uuid()) @map("id")
+  userId        String    @map("user_id")
+  originalText  String    @map("original_text")
+  title         String?   @map("title")
+  reviewedText  String?   @map("reviewed_text")
+  estimatedInks Int?      @default(0) @map("estimated_inks")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt     DateTime? @map("deleted_at")
+
+  user           Users            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  journalParams  JournalParams[]
+  journalReviews JournalReviews[]
+
+  @@index([userId])
+  @@index([createdAt(sort: Desc)])
+  @@map("journals")
+}
+
+model JournalParams {
+  id                 String    @id @default(uuid()) @map("id")
+  journalId          String    @map("journal_id")
+  reviewLanguage     String    @default("en") @map("review_language")
+  targetLanguage     String    @default("en") @map("target_language")
+  tone               String    @default("original") @map("tone")
+  improveReadability Boolean   @default(false) @map("improve_readability")
+  textLength         String    @default("none") @map("text_length")
+  minCharacters      Int?      @default(0) @map("min_characters")
+  maxCharacters      Int?      @default(0) @map("max_characters")
+  createdAt          DateTime  @default(now()) @map("created_at")
+  updatedAt          DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt          DateTime? @map("deleted_at")
+
+  journal Journals @relation(fields: [journalId], references: [id], onDelete: Cascade)
+
+  @@map("journal_params")
+}
+
+model JournalReviews {
+  id        String    @id @default(uuid()) @map("id")
+  journalId String    @map("journal_id")
+  score     String    @map("score")
+  feedback  String    @map("feedback")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+
+  journal               Journals                @relation(fields: [journalId], references: [id], onDelete: Cascade)
+  journalReviewInsights JournalReviewInsights[]
+
+  @@map("journal_reviews")
+}
+
+model JournalReviewInsights {
+  id                 String    @id @default(uuid()) @map("id")
+  journalReviewId    String    @map("journal_review_id")
+  mistakeType        String    @map("mistake_type")
+  mistakeTitle       String    @map("mistake_title")
+  originalMistake    String    @map("original_mistake")
+  mistakeCorrection  String    @map("mistake_correction")
+  mistakeExplanation String    @map("mistake_explanation")
+  ranges             Json      @map("ranges")
+  createdAt          DateTime  @default(now()) @map("created_at")
+  updatedAt          DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt          DateTime? @map("deleted_at")
+
+  journalReview JournalReviews @relation(fields: [journalReviewId], references: [id], onDelete: Cascade)
+
+  @@index([journalReviewId])
+  @@map("journal_review_insights")
+}
+
+model ViewJournalSummary {
+  journalId      String   @map("journal_id")
+  organizationId String   @map("organization_id")
+  userId         String   @map("user_id")
+  title          String?  @map("title")
+  text           String   @map("text")
+  score          String   @map("score")
+  tone           String   @map("tone")
+  usedInks       Int?     @map("used_inks")
+  createdAt      DateTime @map("created_at")
+
+  @@id([journalId])
+  @@map("v_journal_summary")
+}
