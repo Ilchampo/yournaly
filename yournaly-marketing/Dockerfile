@@ -1,7 +1,7 @@
 # =============================================================================
 # Yournaly Website — production image for Northflank
 # =============================================================================
-# Build context: yournaly-next/
+# Build context: yournaly-marketing/
 # Health check path: GET /
 # Listen: 0.0.0.0:$PORT (default 3000)
 # =============================================================================

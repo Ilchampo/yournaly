@@ -19,7 +19,7 @@ export default defineConfig({
 	manifest: {
 		name: 'Yournaly',
 		description: 'Yournaly is a tool that helps you learn a new language by writing in it. Have fun learning!',
-		version: '1.0.0',
+		version: '1.1.1',
 		homepage_url: 'https://yournaly.p4blobeltran.com',
 		permissions: ['sidePanel', 'storage', 'identity'],
 		host_permissions: ['https://api.yournaly.p4blobeltran.com/*'],
